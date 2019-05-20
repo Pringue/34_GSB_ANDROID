@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    tools:layout_editor_absoluteY="81dp">
+
+    <ListView
+        android:id="@+id/lstAntibio"
+        style="@style/Widget.AppCompat.ListView.DropDown"
+        android:layout_width="0dp"
+        android:layout_height="448dp"
+        android:fadeScrollbars="true"
+        android:scrollbarAlwaysDrawHorizontalTrack="true"
+        android:scrollbarAlwaysDrawVerticalTrack="true"
+        android:scrollbars="vertical"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nomAntibio"
+        tools:scrollbarStyle="insideInset" />
+
+    <TextView
+        android:id="@+id/titre"
+        android:layout_width="237dp"
+        android:layout_height="37dp"
+        android:layout_marginTop="22dp"
+        android:layout_marginEnd="147dp"
+        android:layout_marginRight="147dp"
+        android:text="Sélectionner la catégorie :"
+        android:textAppearance="@style/TextAppearance.AppCompat.Light.Widget.PopupMenu.Large"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nbMaxParJour" />
+
+    <Button
+        android:id="@+id/btnRetour"
+        android:layout_width="139dp"
+        android:layout_height="45dp"
+        android:layout_marginBottom="55dp"
+        android:text="Retour"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/lstAntibiotique"
+        app:layout_constraintStart_toEndOf="@+id/nbMaxParJour"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <ListView
+        android:id="@+id/lstAntibiotique"
+        style="@style/Widget.AppCompat.ListView.DropDown"
+        android:layout_width="384dp"
+        android:layout_height="413dp"
+        android:layout_marginTop="8dp"
+        android:scrollbars="vertical"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/titre" />
+
+    <Button
+        android:id="@+id/retourAntibio"
+        android:layout_width="107dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginRight="5dp"
+        android:text="Retour"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/nbMaxParJour"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/nomAntibio"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/nomAntibio"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="6dp"
+        android:text="Nom"
+        android:textAppearance="@style/TextAppearance.AppCompat.Light.Widget.PopupMenu.Large"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/nbKilo"
+        app:layout_constraintEnd_toStartOf="@+id/retourAntibio"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/doseAntibio"
+        android:layout_width="0dp"
+        android:layout_height="427dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Light.Widget.PopupMenu.Large"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/titre" />
+
+    <EditText
+        android:id="@+id/nbKilo"
+        style="@style/TextAppearance.AppCompat.Light.Widget.PopupMenu.Large"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        android:textAppearance="@style/TextAppearance.AppCompat.Light.Widget.PopupMenu.Large"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/calculer"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nomAntibio" />
+
+    <Button
+        android:id="@+id/calculer"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="6dp"
+        android:layout_marginRight="6dp"
+        android:layout_marginBottom="25dp"
+        android:text="Calculer"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/resultatCalcul"
+        app:layout_constraintEnd_toEndOf="@+id/resultatCalcul"
+        app:layout_constraintStart_toStartOf="@+id/nbKilo"
+        app:layout_constraintTop_toBottomOf="@+id/nbKilo" />
+
+    <TextView
+        android:id="@+id/resultatCalcul"
+        android:layout_width="197dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginBottom="307dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Light.Widget.PopupMenu.Large"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/calculer" />
+
+    <TextView
+        android:id="@+id/nbMaxParJour"
+        android:layout_width="240dp"
+        android:layout_height="29dp"
+        android:layout_marginStart="7dp"
+        android:layout_marginLeft="7dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="152dp"
+        android:layout_marginRight="152dp"
+        android:layout_marginBottom="16dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Light.Widget.PopupMenu.Large"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/titre"
+        app:layout_constraintEnd_toStartOf="@+id/btnRetour"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/categTitle"
+        android:layout_width="198dp"
+        android:layout_height="36dp"
+        android:text="Selectionner la categorie"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/lstAntibio"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txtNom"
+        android:layout_width="140dp"
+        android:layout_height="33dp"
+        android:layout_marginTop="101dp"
+        android:text="Nom :"
+        android:textAppearance="@style/TextAppearance.AppCompat.Light.Widget.PopupMenu.Large"
+        android:visibility="gone"
+        app:layout_constraintEnd_toStartOf="@+id/editNom"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txtMdp"
+        android:layout_width="140dp"
+        android:layout_height="28dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginBottom="78dp"
+        android:text="Mot de passe : "
+        android:textAppearance="@style/TextAppearance.AppCompat.Light.Widget.PopupMenu.Large"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/btnConnexion"
+        app:layout_constraintEnd_toStartOf="@+id/editMdp"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/editNom"
+        android:layout_width="wrap_content"
+        android:layout_height="44dp"
+        android:layout_marginTop="88dp"
+        android:layout_marginEnd="13dp"
+        android:layout_marginRight="13dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/txtNom"
+        app:layout_constraintTop_toBottomOf="@+id/titre" />
+
+    <EditText
+        android:id="@+id/editMdp"
+        android:layout_width="wrap_content"
+        android:layout_height="39dp"
+        android:layout_marginEnd="13dp"
+        android:layout_marginRight="13dp"
+        android:layout_marginBottom="47dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:password="true"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/lstAntibiotique"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/txtMdp" />
+
+    <Button
+        android:id="@+id/btnConnexion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="141dp"
+        android:layout_marginLeft="141dp"
+        android:layout_marginEnd="140dp"
+        android:layout_marginRight="140dp"
+        android:layout_marginBottom="178dp"
+        android:text="Connexion"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</android.support.constraint.ConstraintLayout>
